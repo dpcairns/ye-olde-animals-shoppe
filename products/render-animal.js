@@ -22,7 +22,7 @@ export function renderAnimal(animal) {
     const img = document.createElement('img');
     img.classList.add('animal-image');
     li.append(img);
-    img.src = `assets/pictures/${animal.image}`;
+    img.src = `../assets/pictures/${animal.image}`;
 
     const pSpecies = document.createElement('p');
     pSpecies.classList.add('animal-species');
