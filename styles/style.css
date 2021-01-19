@@ -83,10 +83,6 @@ header img {
 content {
     width: 80%;
 }
-
-p {
-    margin: var(--gutter);
-}
   
 footer {
     position: fixed;
@@ -116,4 +112,34 @@ footer {
         transform: rotate3d(10, 10, 10, 50deg) scale(1);
     }
 
+  }
+
+  ul {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+
+  .animal-item {
+    border: solid 1px black;
+    text-align: center;
+  }
+
+  .animal-price {
+      font-weight: 900;
+  }
+
+  .animal-species {
+      background-color: magenta;
+  }
+
+  .animal-furry {
+      font-family: cursive;
+  }
+
+  .animal-image {
+      width: 50px;
+      height: 50px;
+      animation: pulse 6s infinite;
   }
