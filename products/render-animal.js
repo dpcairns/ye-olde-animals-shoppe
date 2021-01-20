@@ -1,15 +1,16 @@
 export function renderAnimal(animal) {
     /*
     animal has 
-        name, 
-        price, 
-        legs, 
-        hasFur, 
-        species, 
-        image, 
-        size
+        { 
+            name, 
+            price, 
+            legs, 
+            hasFur, 
+            species, 
+            image, 
+            size
+        }
     */
-
    
     const li = document.createElement('li');
     li.classList.add('animal-item');
@@ -55,5 +56,5 @@ export function renderAnimal(animal) {
     li.append(button);
 
 
-    return li; 
+    return li;
 }

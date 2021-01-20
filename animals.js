@@ -1,3 +1,9 @@
+/*
+We have a number in mind
+
+We want to find the match in the array, given that number
+*/
+
 export const animals = [
     {
         id: 1,
