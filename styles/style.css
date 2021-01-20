@@ -22,6 +22,11 @@ body {
     background-color: var(--color2);
 }
 
+table {
+    width: 100%;
+    background: pink;
+}
+
 main {
     display: flex;
     flex-direction: column;

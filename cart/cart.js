@@ -1,24 +1,32 @@
-// import functions and grab DOM elements
-// CONVERSATION
+import { cart } from './cart-data.js';
+import { animals } from '../animals.js';
 
-import { animals } from '../data.js';
-import { renderAnimal } from './render-animal.js';
+import { renderTableRow, getAnimalTotal } from './render-table-row.js';
+import { findById } from '../utils.js';
 
-// a empty div to inject stuff into
-const list = document.getElementById('list');
+const table = document.querySelector('table');
 
-// "loop" through the animals array
-// "loop" means: do something to every item in an array
-for (let animal of animals) {
-    // for each animal in the animals array
-    // feed it into the renderAnimal function
-    // it returns a DOM element called animalElement
-    const animalElement = renderAnimal(animal);
+let total = 0;
 
-    // append it to our empty list
-    list.append(animalElement);
+for (let item of cart) {
+    const animal = findById(item.id, animals);
+    
+    const totalForThisAnimal = getAnimalTotal(item, animal);
+
+    total = total + totalForThisAnimal;
+    const tableRowDOM = renderTableRow(item, animal);
+
+    table.append(tableRowDOM);
 }
 
-// initialize state
+const tr = document.createElement('tr');
+const td1 = document.createElement('td');
+const td2 = document.createElement('td');
+const td3 = document.createElement('td');
 
-// set event listeners to update state and DOM
+td3.textContent = `Order total: $${total}`;
+
+tr.append(td1, td2, td3);
+
+table.append(tr);
+
