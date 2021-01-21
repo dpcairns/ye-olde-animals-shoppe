@@ -32,3 +32,14 @@ tr.append(td1, td2, td3);
 
 table.append(tr);
 
+
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+    const cart = getCart();
+
+    alert(JSON.stringify(cart, true, 2));
+
+});
+
+
