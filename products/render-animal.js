@@ -1,3 +1,5 @@
+import { addToCart } from '../cart-utils.js';
+
 export function renderAnimal(animal) {
     /*
     animal has 
@@ -52,9 +54,12 @@ export function renderAnimal(animal) {
     li.append(pFurry);
    
     const button = document.createElement('button');
+    button.addEventListener('click', () => {
+        addToCart(animal.id);
+    });
+
     button.textContent = 'Add to cart';
     li.append(button);
-
 
     return li;
 }

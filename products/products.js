@@ -1,7 +1,7 @@
 // import functions and grab DOM elements
 // CONVERSATION
 
-import { animals } from '../data.js';
+import { animals } from '../animals.js';
 import { renderAnimal } from './render-animal.js';
 
 // a empty div to inject stuff into
