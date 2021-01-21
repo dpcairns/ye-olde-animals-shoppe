@@ -1,10 +1,12 @@
-import { cart } from './cart-data.js';
 import { animals } from '../animals.js';
 
 import { renderTableRow, getAnimalTotal } from './render-table-row.js';
 import { findById } from '../utils.js';
+import { getCart } from '../cart-utils.js';
 
 const table = document.querySelector('table');
+
+const cart = getCart();
 
 let total = 0;
 
